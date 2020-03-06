@@ -1,0 +1,49 @@
+{
+  "name": "with-typescript",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "type-check": "tsc"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "axios-hooks": "^1.9.0",
+    "body-parser": "^1.19.0",
+    "connect-mongo": "^3.2.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "express-validator": "^6.4.0",
+    "immer": "^6.0.1",
+    "mongodb": "^3.5.4",
+    "mongoose": "^5.9.3",
+    "morgan": "^1.9.1",
+    "next": "^9.2.2",
+    "nprogress": "^0.2.0",
+    "passport": "^0.4.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "semantic-ui-react": "^0.88.2",
+    "use-immer": "^0.3.5",
+    "validator": "^12.2.0"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.0",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.3",
+    "@types/express-session": "^1.17.0",
+    "@types/mongodb": "^3.5.2",
+    "@types/mongoose": "^5.7.3",
+    "@types/morgan": "^1.9.0",
+    "@types/node": "^13.7.7",
+    "@types/nprogress": "^0.2.0",
+    "@types/passport": "^1.0.2",
+    "@types/react": "^16.9.23",
+    "@types/react-dom": "^16.9.5",
+    "@types/validator": "^10.11.3",
+    "typescript": "3.8.3"
+  },
+  "license": "ISC"
+}
