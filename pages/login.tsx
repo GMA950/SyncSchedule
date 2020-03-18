@@ -21,7 +21,7 @@ const LoginPage: NextPage = () => {
   const valid = isEmail(email) && isLength(password, { min: 3, max: 100 });
 
   if (loading || user) {
-    return <p>Loading...</p>;
+    return <p>Cargando...</p>;
   }
   return (
     <>
@@ -44,7 +44,7 @@ const LoginPage: NextPage = () => {
           value={email}
           onChange={(_e, { value }) => setEmail(value)}
         />
-        <Label>Password</Label>
+        <Label>Contraseña</Label>
         <Input
           name="password"
           type="password"
@@ -52,7 +52,7 @@ const LoginPage: NextPage = () => {
           onChange={(_e, { value }) => setPassword(value)}
         />
         <Button primary disabled={!valid} type="submit">
-          Login
+          Iniciar Sesion
         </Button>
       </Form>
     </>

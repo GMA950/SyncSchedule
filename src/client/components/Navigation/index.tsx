@@ -22,10 +22,10 @@ const Navigation: FC = () => {
       ) : (
         <>
           <Link href="/login" passHref>
-            <Button primary>Login</Button>
+            <Button primary>Iniciar Sesion</Button>
           </Link>
           <Link href="/signUp" passHref>
-            <Button color="green">Sign Up</Button>
+            <Button color="green">Registrarse</Button>
           </Link>
         </>
       )}

@@ -17,10 +17,11 @@ const SignUpPage: NextPage = () => {
       Router.push("/");
     }
   }, [user]);
+
   const valid = isEmail(email) && isLength(password, { min: 3, max: 100 });
 
   if (loading || user) {
-    return <p>Loading...</p>;
+    return <p>Cargando...</p>;
   }
   return (
     <>
@@ -29,6 +30,7 @@ const SignUpPage: NextPage = () => {
           <Message error>{error}</Message>
         </div>
       )}
+      
       <Form
         onSubmit={async e => {
           e.preventDefault();
@@ -42,7 +44,7 @@ const SignUpPage: NextPage = () => {
           value={email}
           onChange={({ target: { value } }) => setEmail(value)}
         />
-        <Label>Password</Label>
+        <Label>Contraseña</Label>
         <Input
           name="password"
           type="password"
@@ -50,7 +52,7 @@ const SignUpPage: NextPage = () => {
           onChange={({ target: { value } }) => setPassword(value)}
         />
         <Button primary disabled={!valid} type="submit">
-          Sign Up
+          Registrarse
         </Button>
       </Form>
     </>

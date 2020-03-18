@@ -10,7 +10,7 @@ const UsersList: FC = () => {
   const [{ data, loading, error }] = useAxios<User[]>("/api/users");
 
   if (loading) {
-    return <p>Loading Users...</p>;
+    return <p>Cargando Usuarios...</p>;
   }
   if (error) {
     console.error(error);
@@ -24,7 +24,7 @@ const UsersList: FC = () => {
           <List.Item key={key}>
             <List bulleted>
               <List.Item>Email: {email}</List.Item>
-              <List.Item>Password: {password}</List.Item>
+              <List.Item>Contraseña: {password}</List.Item>
             </List>
           </List.Item>
         ))}
@@ -37,12 +37,12 @@ const Index: NextPage = () => {
   const { user, loading } = useContext(AuthContext);
 
   if (loading) {
-    return <Label>Loading...</Label>;
+    return <Label>Cargando...</Label>;
   }
   if (user) {
     return <UsersList />;
   }
-  return <Label>You need to be authenticated!</Label>;
+  return <Label>¡Tienes que haber iniciado sesión!</Label>;
 };
 
 export default Index;
