@@ -14,15 +14,15 @@ const Navigation: FC = () => {
     <nav>
       {user ? (
         <>
-          <Label>Welcome {user.email}</Label>
+          <Label>Bienvenido {user.email}</Label>
           <Button color="red" onClick={() => logout()}>
-            Logout
+            Cerrar Sesión
           </Button>
         </>
       ) : (
         <>
           <Link href="/login" passHref>
-            <Button primary>Iniciar Sesion</Button>
+            <Button primary>Iniciar Sesión</Button>
           </Link>
           <Link href="/signUp" passHref>
             <Button color="green">Registrarse</Button>
