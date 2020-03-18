@@ -1,3 +1,6 @@
+import "../public/style.css";
+import "../public/nprogress.css";
+
 import App from "next/app";
 import Router from "next/router";
 import NProgress from "nprogress";
