@@ -18,18 +18,19 @@ const UsersList: FC = () => {
   }
 
   return (
-    <div>
-      <List ordered animated divided>
-        {data.map(({ email, password }, key) => (
-          <List.Item key={key}>
-            <List bulleted>
-              <List.Item>Email: {email}</List.Item>
-              <List.Item>Contraseña: {password}</List.Item>
-            </List>
-          </List.Item>
-        ))}
-      </List>
-    </div>
+
+  <div>
+    <List ordered animated divided>
+      {data.map(({ email, password }, key) => (
+        <List.Item key={key}>
+          <List bulleted>
+            <List.Item>Email: {email}</List.Item>
+            <List.Item>Contraseña: {password}</List.Item>
+          </List>
+        </List.Item>
+      ))}
+    </List>
+  </div>
   );
 };
 
@@ -42,7 +43,12 @@ const Index: NextPage = () => {
   if (user) {
     return <UsersList />;
   }
-  return <Label>¡Tienes que haber iniciado sesión!</Label>;
+  
+  return (
+  <div className="tll1">
+    <Label>¡Tienes que haber iniciado sesión!</Label>
+  </div>
+  );
 };
 
 export default Index;

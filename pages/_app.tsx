@@ -17,7 +17,11 @@ export default class MyApp extends App {
     const { Component, pageProps } = this.props;
 
     return (
+      
       <Auth>
+        {/*<div className="banner">
+          <img style = {{position:"absolute", width:"100%", top:"-40px", display:"inline-block"}}src="/banner.png"/>
+    </div>*/}
         <Navigation />
         <Component {...pageProps} />
       </Auth>

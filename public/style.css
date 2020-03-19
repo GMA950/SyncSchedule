@@ -1,0 +1,19 @@
+.banner{
+    background-image: url("/banner.png");
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 210px;
+  }
+
+  .botones{
+    position: relative;
+    left: 86%;
+    top: 12%;
+  }
+  .tll1{
+    position: absolute;
+    left: 87.3%;
+    top: 10.5%;
+  }
