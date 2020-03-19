@@ -9,13 +9,18 @@
 
   .botones{
     position: relative;
-    left: 86%;
+    left: 85.8%;
     top: 12%;
   }
   .tll1{
-    position: absolute;
+    position: relative; /*absolute*/
     left: 87.3%;
     top: -12.5%;
+  }
+  .tll2{
+    position: relative;
+    left: 62.3%;
+    top: 1%;
   }
   .back{
     background-image: url("/backgroundWeb.jpg");

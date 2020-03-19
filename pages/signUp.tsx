@@ -37,25 +37,27 @@ const SignUpPage: NextPage = () => {
           signUp({ email, password });
         }}
       >
-        {/*<div className="banner">*/}
-          <Label>Email</Label>
-          <Input
-            name="email"
-            type="email"
-            value={email}
-            onChange={({ target: { value } }) => setEmail(value)}
-          />
-          <Label>Contraseña</Label>
-          <Input
-            name="password"
-            type="password"
-            value={password}
-            onChange={({ target: { value } }) => setPassword(value)}
-          />
-          <Button primary disabled={!valid} type="submit">
-            Registrarse
-          </Button>
-          {/*</div>*/}
+        <div className="back">
+          <div className="tll2">
+            <Label>Email</Label>
+            <Input
+              name="email"
+              type="email"
+              value={email}
+              onChange={({ target: { value } }) => setEmail(value)}
+            />
+            <Label>Contraseña</Label>
+            <Input
+              name="password"
+              type="password"
+              value={password}
+              onChange={({ target: { value } }) => setPassword(value)}
+            />
+            <Button primary disabled={!valid} type="submit">
+              Registrarse
+            </Button>
+          </div>
+        </div>
       </Form>
     </>
   );
