@@ -45,9 +45,13 @@ const Index: NextPage = () => {
   }
   
   return (
-  <div className="tll1">
-    <Label>¡Tienes que haber iniciado sesión!</Label>
-  </div>
+    <div>
+      <div className="back">
+        <div className="tll1">
+          <Label>¡Tienes que haber iniciado sesión!</Label>
+        </div>
+      </div>
+    </div>
   );
 };
 
