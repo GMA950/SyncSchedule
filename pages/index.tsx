@@ -1,5 +1,6 @@
 import useAxios from "axios-hooks";
 import { NextPage } from "next";
+import Link from "next/link";
 import { FC, useContext } from "react";
 import { Label, List } from "semantic-ui-react";
 
@@ -18,19 +19,18 @@ const UsersList: FC = () => {
   }
 
   return (
-
-  <div>
-    <List ordered animated divided>
-      {data.map(({ email, password }, key) => (
-        <List.Item key={key}>
-          <List bulleted>
-            <List.Item>Email: {email}</List.Item>
-            <List.Item>Contraseña: {password}</List.Item>
-          </List>
-        </List.Item>
-      ))}
-    </List>
-  </div>
+    <div>
+      <List ordered animated divided>
+        {data.map(({ email, password }, key) => (
+          <List.Item key={key}>
+            <List bulleted>
+              <List.Item>Email: {email}</List.Item>
+              <List.Item>Contraseña: {password}</List.Item>
+            </List>
+          </List.Item>
+        ))}
+      </List>
+    </div>
   );
 };
 
@@ -43,13 +43,20 @@ const Index: NextPage = () => {
   if (user) {
     return <UsersList />;
   }
-  
+
   return (
     <div>
       <div className="back">
         <div className="tll1">
           <Label>¡Tienes que haber iniciado sesión!</Label>
         </div>
+        <Link href="/crearHorario">
+          <button>Crear Horario</button>
+        </Link>
+        <br />
+        <Link href="/votaHorario">
+          <a>Votar Horario</a>
+        </Link>
       </div>
     </div>
   );
