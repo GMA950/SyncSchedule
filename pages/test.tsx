@@ -1,3 +1,3 @@
 export default () => {
-  return <div style={{ color: "blue" }}>hello world</div>;
+  return <div style={{ color: "red" }}>hello world</div>;
 };

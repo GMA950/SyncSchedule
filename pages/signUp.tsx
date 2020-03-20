@@ -17,10 +17,11 @@ const SignUpPage: NextPage = () => {
       Router.push("/");
     }
   }, [user]);
+
   const valid = isEmail(email) && isLength(password, { min: 3, max: 100 });
 
   if (loading || user) {
-    return <p>Loading...</p>;
+    return <p>Cargando...</p>;
   }
   return (
     <>
@@ -29,29 +30,34 @@ const SignUpPage: NextPage = () => {
           <Message error>{error}</Message>
         </div>
       )}
+      
       <Form
         onSubmit={async e => {
           e.preventDefault();
           signUp({ email, password });
         }}
       >
-        <Label>Email</Label>
-        <Input
-          name="email"
-          type="email"
-          value={email}
-          onChange={({ target: { value } }) => setEmail(value)}
-        />
-        <Label>Password</Label>
-        <Input
-          name="password"
-          type="password"
-          value={password}
-          onChange={({ target: { value } }) => setPassword(value)}
-        />
-        <Button primary disabled={!valid} type="submit">
-          Sign Up
-        </Button>
+        <div className="back">
+          <div className="tll2">
+            <Label>Email</Label>
+            <Input
+              name="email"
+              type="email"
+              value={email}
+              onChange={({ target: { value } }) => setEmail(value)}
+            />
+            <Label>Contraseña</Label>
+            <Input
+              name="password"
+              type="password"
+              value={password}
+              onChange={({ target: { value } }) => setPassword(value)}
+            />
+            <Button primary disabled={!valid} type="submit">
+              Registrarse
+            </Button>
+          </div>
+        </div>
       </Form>
     </>
   );

@@ -1,0 +1,33 @@
+.banner {
+  background-image: url("/banner.png");
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 180px; /*210*/
+}
+
+.botones {
+  position: relative;
+  left: 85.8%;
+  top: 12%;
+}
+.tll1 {
+  position: relative; /*absolute*/
+  left: 87.3%;
+  top: -12.5%;
+}
+.tll2 {
+  position: relative;
+  left: 62.3%;
+  top: 1%;
+}
+
+body {
+  background-image: url("/backgroundWeb.jpg");
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 800px;
+}
