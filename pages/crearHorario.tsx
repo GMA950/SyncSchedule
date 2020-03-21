@@ -11,15 +11,6 @@ import { User } from "../src/interfaces";
 const TablaHorario: FC = () => {
 /*const UsersList: FC = () => {*/
 
-  const [{ data, loading, error }] = useAxios<User[]>("/api/users");
-
-  if (loading) {
-    return <p>Cargando Usuarios...</p>;
-  }
-  if (error) {
-    console.error(error);
-    return <p>Error! {error.message}</p>;
-  }
   /**
    * [[0,1], [3,2], [5,7]]
    */
@@ -31,6 +22,17 @@ const TablaHorario: FC = () => {
     horariosBloqueados
   });
 
+
+  const [{ data, loading, error }] = useAxios<User[]>("/api/users");
+
+  if (loading) {
+    return <p>Cargando Usuarios...</p>;
+  }
+  if (error) {
+    console.error(error);
+    return <p>Error! {error.message}</p>;
+  }
+  
   return (
     <Table>
       <Table.Header>
