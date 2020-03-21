@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import Router from "next/router";
+import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
 import { Button, Form, Input, Label, Message } from "semantic-ui-react";
 import { isEmail, isLength } from "validator";
@@ -58,6 +59,31 @@ const LoginPage: NextPage = () => {
             </Button>
           </div>
         </div>
+        <div className="box2">
+            <div className="texto1" >
+              ¡La nueva forma de organizarse!
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <div className="texto2" >
+            <span style={{color: "red"}}>Sync</span>Schedule es una herramienta pensada para la orgnizacion de eventos grupales
+              <br/>
+              <br/>
+              como clases, ayudantias, citaciones, etc. 
+              <br/>
+              <br/>
+              Ideada para que sea fácil de usar para todos y de forma grauita.
+            </div>
+            <div className="pos1">
+              <Link href="/signUp">
+                <div className="feedback-button">
+                  {/*<Link href="/crearHorario">REGISTRARSE</Link>*/}
+                  REGISTRARSE
+                </div>
+              </Link>
+            </div>
+          </div>
         
       </Form>
     </>

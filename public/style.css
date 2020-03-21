@@ -7,10 +7,15 @@
     font-family: "Syncopate";
     src: url("Syncopate-Regular.ttf"); 
     }
-    @font-face {
-      font-family: "SyncopateB";
-      src: url("Syncopate-Bold.ttf"); 
-      }
+  @font-face {
+    font-family: "SyncopateB";
+    src: url("Syncopate-Bold.ttf"); 
+    }
+  @font-face {
+    font-family: "Questrial";
+    src: url("Questrial-Regular.ttf"); 
+    }
+    
   
 
 .banner {
@@ -27,6 +32,11 @@
   position: relative;
   left: 85.8%;
   top: 16%;
+}
+.botonesOn {
+  position: relative;
+  left: 79.2%;
+  top: 34%;
 }
 .tll1 {
   position: absolute; /*absolute*/
@@ -56,6 +66,51 @@
   /*background-color: rgba(43, 133, 197, 0.801);*/
   background-image: url("/stock2.jpg");
   background-size: cover;
+  }
+
+  .box2 {
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+    position: relative;
+    width: 1400px;
+    height: 520px;
+    left: 50%;
+    margin-left: -700px;
+    margin-top: 50px;
+    border-radius: 55px;
+    /*background-color: rgba(43, 133, 197, 0.801);*/
+    background-image: url("/stock2.jpg");
+    background-size: cover;
+  }
+
+  .box3 {
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+    position: relative;
+    width: 94%;
+    height: 620px;
+    left: 50%;
+    margin-left: -47%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: rgba(43, 133, 197, 0.801);
+    /*background-image: url("/stock2.jpg"); */
+    background-size: cover;
+  }
+  .box4 {
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+    position: relative;
+    width: 94%;
+    height: 70px;
+    left: 50%;
+    margin-left: -47%;
+    margin-top: 20px;
+    border-top-left-radius: 55px;
+    border-top-right-radius: 55px;
+    background-color: rgba(58, 173, 48, 0.801);
+    /*background-image: url("/stock2.jpg"); */
+    background-size: cover;
   }
 
 .texto1{
@@ -91,11 +146,77 @@
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
+.texto3{
+  position: relative;
+  top: 15%;
+  text-align: center;
+  font: normal 16px/1 "carter-one", Helvetica, sans-serif;
+  font-size: 40px;
+  letter-spacing: 0px;
+  word-spacing: 0px;
+  color: #000000;
+  font-weight: 400;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-shadow: -2px 0 rgb(255, 255, 255), 0 2px rgb(255, 255, 255), 2px 0 rgb(255, 255, 255), 0 -2px rgb(255, 255, 255);
+}
+
 .pos1{
   position: relative;
   top: 30%;
   left: 41%;
 }
+
+.pos2{
+  position: fixed;
+  top: 83%;
+  left: 80%;
+}
+
+.lista1 {
+  position: relative;
+  left: 2%;
+  top: 5%;
+}
+
+.item1 {
+  -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+  box-shadow: 5px 5px 15px 5px #000000;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  width: 95%;
+  height: 70px;
+  background-color: #f9ab82;
+
+}
+
+.item2 {
+  -moz-column-count: 4;
+  -moz-column-gap: 20px;
+  -webkit-column-count: 4;
+  -webkit-column-gap: 20px;
+  column-count: 4;
+  column-gap: 20px;
+  
+}
+
+.textoList{
+  position: relative;
+  left: 7%;
+  top: 15%;
+  font: normal 20px/1 "SyncopateB", Helvetica, sans-serif;
+  text-shadow: -1px 0 rgb(255, 255, 255), 0 1px rgb(255, 255, 255), 1px 0 rgb(255, 255, 255), 0 -1px rgb(255, 255, 255);
+}
+
+.textoList2{
+  font-style: italic;
+  font: normal 20px/1 "Questrial", Helvetica, sans-serif;
+  /*text-shadow: -1px 0 rgb(255, 255, 255), 0 1px rgb(255, 255, 255), 1px 0 rgb(255, 255, 255), 0 -1px rgb(255, 255, 255);*/
+}
+
+
 
 body {
   background-image: url("/backgroundWeb.jpg");
@@ -171,4 +292,54 @@ body {
   background-size: auto auto;
   -webkit-box-shadow: 0 5px 0 0 rgba(178,49,49,1) ;
   box-shadow: 0 5px 0 0 rgba(178,49,49,1) ;
+}
+
+.enjoy-css {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: pointer;
+  margin: 30px 0 0;
+  padding: 0 60px;
+  border: 1px solid #0f9b0f;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font: normal 25px/60px "Questrial", Helvetica, sans-serif;
+  color: rgb(255, 255, 255);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: -webkit-linear-gradient(-90deg, rgb(90,190,87) 0, rgb(53,146,56) 100%), rgb(90, 190, 87);
+  background: -moz-linear-gradient(180deg, rgb(90,190,87) 0, rgb(53,146,56) 100%), rgb(90, 190, 87);
+  background: linear-gradient(180deg, rgb(90,190,87) 0, rgb(53,146,56) 100%), rgb(90, 190, 87);
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+  -webkit-box-shadow: 0 2px 1px 0 rgba(0,0,0,0.3) ;
+  box-shadow: 0 2px 1px 0 rgba(0,0,0,0.3) ;
+  text-shadow: 0 1px 2px rgb(50,114,40) ;
+}
+
+.enjoy-css:hover {
+  background: rgb(90, 190, 87);
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.11) ;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.11) ;
+  -webkit-transition: all 150ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 150ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 150ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 150ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.enjoy-css:active {
+  border: 1px solid rgba(180,180,180,0.2);
+  background: rgba(77,168,74,1);
+  -webkit-box-shadow: 0 3px 0 0 rgba(0,0,0,0.1) inset;
+  box-shadow: 0 3px 0 0 rgba(0,0,0,0.1) inset;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
 }
