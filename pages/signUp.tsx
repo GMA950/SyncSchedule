@@ -37,7 +37,7 @@ const SignUpPage: NextPage = () => {
           signUp({ email, password });
         }}
       >
-        <div className="back">
+        {/*<div className="back">*/}
           <div className="tll2">
             <Label>Email</Label>
             <Input
@@ -57,7 +57,7 @@ const SignUpPage: NextPage = () => {
               Registrarse
             </Button>
           </div>
-        </div>
+        {/*</div>*/}
       </Form>
     </>
   );

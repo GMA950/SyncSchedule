@@ -15,7 +15,7 @@ const Navigation: FC = () => {
     <nav className="banner">
       {user ? (
         <>
-          <div className="botones">
+          <div className="botonesOn">
             <Label>Bienvenido {user.email}</Label>
             <Button color="red" onClick={() => logout()}>
               Cerrar Sesión

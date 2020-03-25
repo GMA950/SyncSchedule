@@ -7,9 +7,11 @@ import bloques from "../bloques.json";
 import dias from "../dias.json";
 import { AuthContext } from "../src/client/components/Auth/Context";
 import { User } from "../src/interfaces";
-import { clearLine } from "readline";
+import{ clearLine} from "readline";
 
-const TablaHorario = () => {
+const TablaHorario: FC = () => {
+/*const UsersList: FC = () => {*/
+
   /**
    * [[0,1], [3,2], [5,7]]
    */
@@ -21,6 +23,17 @@ const TablaHorario = () => {
     horariosBloqueados
   });
 
+
+  const [{ data, loading, error }] = useAxios<User[]>("/api/users");
+
+  if (loading) {
+    return <p>Cargando Usuarios...</p>;
+  }
+  if (error) {
+    console.error(error);
+    return <p>Error! {error.message}</p>;
+  }
+  
   return (
     <Table celled fixed>
       <Table.Header>
@@ -37,7 +50,7 @@ const TablaHorario = () => {
       </Table.Header>
       <Table.Body>
         {bloques.map((bloque, x) => {
-          if (bloque.id == 4) {
+           if (bloque.id == 4) {
             <Table.Row basic>
               <Table.Cell>asdsd</Table.Cell>
             </Table.Row>;
@@ -88,7 +101,7 @@ const TablaHorario = () => {
     </Table>
   );
 };
-
+/*
 const UsersList: FC = () => {
   const [{ data, loading, error }] = useAxios<User[]>("/api/users");
 
@@ -115,7 +128,7 @@ const UsersList: FC = () => {
     </div>
   );
 };
-
+*/
 const Index: NextPage = () => {
   const { user, loading } = useContext(AuthContext);
 
@@ -123,7 +136,8 @@ const Index: NextPage = () => {
     return <Label>Cargando...</Label>;
   }
   if (user) {
-    return <UsersList />;
+    /*return <UsersList />;*/
+    return <TablaHorario />;
   }
 
   return (
@@ -132,7 +146,7 @@ const Index: NextPage = () => {
         <div className="tll1">
           <Label>¡Tienes que haber iniciado sesión!</Label>
         </div>
-        <TablaHorario />
+       {/*<TablaHorario />*/}
       </div>
     </div>
   );
