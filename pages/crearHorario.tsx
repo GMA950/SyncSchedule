@@ -1,12 +1,13 @@
 import useAxios from "axios-hooks";
 import { NextPage } from "next";
 import { FC, useContext, useState } from "react";
-import { Label, List, Table } from "semantic-ui-react";
+import { Label, List, Table, Icon } from "semantic-ui-react";
 
 import bloques from "../bloques.json";
 import dias from "../dias.json";
 import { AuthContext } from "../src/client/components/Auth/Context";
 import { User } from "../src/interfaces";
+import { clearLine } from "readline";
 
 const TablaHorario = () => {
   /**
@@ -21,17 +22,26 @@ const TablaHorario = () => {
   });
 
   return (
-    <Table>
+    <Table celled fixed>
       <Table.Header>
         <Table.Row>
-          <Table.HeaderCell />
+          <Table.HeaderCell textAlign="center">Horario</Table.HeaderCell>
           {dias.map(dia => {
-            return <Table.HeaderCell key={dia}>{dia}</Table.HeaderCell>;
+            return (
+              <Table.HeaderCell textAlign="center" key={dia}>
+                {dia}
+              </Table.HeaderCell>
+            );
           })}
         </Table.Row>
       </Table.Header>
       <Table.Body>
         {bloques.map((bloque, x) => {
+          if (bloque.id == 4) {
+            <Table.Row basic>
+              <Table.Cell>asdsd</Table.Cell>
+            </Table.Row>;
+          }
           return (
             <Table.Row key={bloque.id}>
               <Table.Cell textAlign="center">
@@ -40,6 +50,8 @@ const TablaHorario = () => {
               {dias.map((dia, y) => {
                 return (
                   <Table.Cell
+                    textAlign="center"
+                    selectable
                     key={dia}
                     onClick={() => {
                       if (
@@ -61,9 +73,11 @@ const TablaHorario = () => {
                   >
                     {horariosBloqueados.find(posicion => {
                       return posicion[0] === x && posicion[1] === y;
-                    })
-                      ? "X"
-                      : "O"}
+                    }) ? (
+                      <Icon color="green" name="checkmark" size="large" />
+                    ) : (
+                      ""
+                    )}
                   </Table.Cell>
                 );
               })}

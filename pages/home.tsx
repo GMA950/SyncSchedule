@@ -1,8 +1,5 @@
 import Logo from "/banner.png";
 
-
-
-
 const Home: FC = () => {
   const { Logo, loading } = useContext(AuthContext);
 
@@ -12,10 +9,9 @@ const Home: FC = () => {
   return (
     <nav>
       user ? (
-        <>
-          <img src={Logo} alt = "website logo" />
-         
-        </>
+      <>
+        <img src={Logo} alt="website logo" />
+      </>
       )
     </nav>
   );
@@ -23,7 +19,5 @@ const Home: FC = () => {
 
 export default Home;
 export default () => {
-
-
   return <div style={{ color: "red" }}>hello world</div>;
 };
