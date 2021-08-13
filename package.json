@@ -20,7 +20,7 @@
     "mongodb": "^3.5.4",
     "mongoose": "^5.9.3",
     "morgan": "^1.9.1",
-    "next": "^9.2.2",
+    "next": "^11.1.0",
     "nprogress": "^0.2.0",
     "passport": "^0.4.1",
     "react": "^16.13.0",
