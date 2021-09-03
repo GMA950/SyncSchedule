@@ -16,7 +16,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.0",
     "express-validator": "^6.4.0",
-    "immer": "^6.0.1",
+    "immer": "^9.0.6",
     "mongodb": "^3.5.4",
     "mongoose": "^5.9.3",
     "morgan": "^1.9.1",
